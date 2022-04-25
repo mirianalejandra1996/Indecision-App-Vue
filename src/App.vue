@@ -45,11 +45,7 @@ import Indecision from "./components/Indecision.vue";
 @import "@/assets/base.css";
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
 }
 
 header {
@@ -106,11 +102,11 @@ nav a:first-of-type {
     place-items: center;
   }
 
-  #app {
+  /* #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
-  }
+  } */
 
   header {
     display: flex;

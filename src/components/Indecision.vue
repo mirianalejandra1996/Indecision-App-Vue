@@ -1,22 +1,51 @@
 <template>
   <!-- <h1>Indecision</h1> -->
- <img src="https://via.placeholder.com/250" alt="bg">
+ <!-- <img v-bind:src=img alt="bg"> -->
+ <img  v-if="img" :src=img alt="bg">
  <div class="bg-dark"></div>
 
  <div class="indecision-container">
-     <input type="text" placeholder="Hazme una pregunta">
-     <p>Recuerda terminar con un signo de interrogación</p>
+     <input type="text" placeholder="Hazme una pregunta" v-model="question">
+     <p>Recuerda terminar con un signo de interrogación (?)</p>
 
-     <div>
-         <h2>Seré millonario?</h2>
-         <h1>Si, No, ...Pensando</h1>
+     <div v-if="isValidQuestion">
+         <h2>{{question}}</h2>
+         <h1>{{answer}}</h1>
      </div>
  </div>
 </template>
 
 <script>
 export default {
+    data(){
+        return {
+            question: null,
+            answer: null ,
+            img: null,
+            isValidQuestion: false,
+        }
+    },
+    methods: {
+        async getAnswer(){
+            this.answer = '...Pensando'
+            console.log('miraaa')
+            const {answer,image} = await fetch('https://yesno.wtf/api').then(r => r.json())
+            console.log(answer,image)
+            // this.answer = answer
+            this.answer = answer === 'yes' ? 'Si!': 'No!'
+            this.img = image
 
+        }
+    },
+    watch: {
+        question (value, oldValue) {
+            this.isValidQuestion = false
+            if (!value.includes('?')) return
+            // TODO: Realizar petición http
+            this.isValidQuestion = true
+            this.getAnswer()
+        }
+    }
 }
 </script>
 
@@ -39,6 +68,10 @@ export default {
     .indecision-container {
         position: relative;
         z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 85vh;
     }
     
     input {

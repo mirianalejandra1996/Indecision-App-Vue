@@ -1,35 +1,19 @@
-# vue-fundamentals
+# Indesicion App 😕❓💻
 
-This template should help get you started developing with Vue 3 in Vite.
+This project has been created with the purpose of applying the fundamentals of Vue that have been acquired in the Fernando Herrera course. My first experience practicing and implementing this great Vue Framework.
 
-## Recommended IDE Setup
+A fun application where all your doubts are left to the decision of a simple computer 🤭
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+## Instructions for use
 
-## Customize configuration
+You will need to enter the question in the field, followed by the question mark "❓" to make the computer think of the answer.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Simple, but it can make you smile!
 
-## Project Setup
+<div align=center><img width="100%" src="https://user-images.githubusercontent.com/91838806/168944346-d11152b6-1f17-47da-baef-b0d4d18a78e1.png" ></div>
 
-```sh
-npm install
-```
+## Author 🎇
 
-### Compile and Hot-Reload for Development
+[🙋🏽‍♀️ Mirian Alejandra Arévalo](https://github.com/mirianalejandra1996).
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+📧 Contact me on: mirianalejandra1996@gmail.com
